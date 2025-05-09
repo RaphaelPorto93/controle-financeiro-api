@@ -1,3 +1,4 @@
+using ControleFinanceiroAPI.Endpoints;
 using Microsoft.EntityFrameworkCore;
 using ControleFinanceiroAPI.Data;
 using ControleFinanceiroAPI.Models;
@@ -11,5 +12,7 @@ var app = builder.Build();
 
 app.MapGet("/transacoes", async (AppDbContext db) =>
     await db.Transacoes.ToListAsync());
+
+app.MapTransacoesEndpoints();
 
 app.Run();

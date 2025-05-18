@@ -9,4 +9,6 @@ public class AppDbContext : DbContext
 
     public DbSet<Transacao> Transacoes => Set<Transacao>();
     public DbSet<Categoria> Categorias => Set<Categoria>();
+
+
 }

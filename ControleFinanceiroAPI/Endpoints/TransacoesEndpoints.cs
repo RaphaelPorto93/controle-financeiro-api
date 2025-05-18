@@ -17,13 +17,11 @@ public static class TransacoesEndpoints
             await db.SaveChangesAsync();
             return Results.Created($"/transacoes/{transacao.Id}", transacao);
         });
-        // Buscar transação por ID
     app.MapGet("/transacoes/{id}", async (int id, AppDbContext db) =>
         await db.Transacoes.FindAsync(id) is Transacao transacao
             ? Results.Ok(transacao)
             : Results.NotFound());
 
-    // Atualizar transação
     app.MapPut("/transacoes/{id}", async (int id, Transacao input, AppDbContext db) =>
     {
         var transacao = await db.Transacoes.FindAsync(id);
@@ -39,7 +37,6 @@ public static class TransacoesEndpoints
         return Results.Ok(transacao);
     });
 
-    // Deletar transação
     app.MapDelete("/transacoes/{id}", async (int id, AppDbContext db) =>
     {
         var transacao = await db.Transacoes.FindAsync(id);

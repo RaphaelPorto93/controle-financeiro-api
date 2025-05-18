@@ -1,4 +1,3 @@
-using ControleFinanceiroAPI.Endpoints;
 using Microsoft.EntityFrameworkCore;
 using ControleFinanceiroAPI.Data;
 using ControleFinanceiroAPI.Models;

@@ -1,48 +1,44 @@
-# 💸 Controle Financeiro Pessoal
+# 💰 Controle Financeiro Pessoal
+
+## 📚 Nome do Projeto
+Controle Financeiro Pessoal
 
 ## 🧾 Descrição
-
-Esta API permite gerenciar transações financeiras pessoais, categorizando receitas e despesas, e consultando o saldo total. É uma solução simples para quem deseja controlar melhor seu dinheiro de forma prática e organizada.
-
----
+Esta API tem como objetivo gerenciar as transações financeiras de um usuário de forma simples e eficiente.  
+Permite o cadastro de transações (entradas e saídas) e categorias personalizadas para organizá-las.  
+Ideal para pessoas que desejam acompanhar seus gastos e ganhos de forma prática.
 
 ## 👥 Integrantes da Dupla
-
-- Bianca Voitechen — [@biavoitechen](https://github.com/biavoitechen)  
-- Raphael Porto — [@RaphaelPorto93](https://github.com/RaphaelPorto93)
-
----
+- Bianca Voitechen - [@biavoitechen](https://github.com/biavoitechen)  
+- Raphael Porto - [@RaphaelPorto93](https://github.com/RaphaelPorto93)
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Linguagem:** C# (.NET 8)
-- **Framework:** ASP.NET Core - Minimal API
-- **ORM:** Entity Framework Core
-- **Banco de Dados:** SQLite
-- **Front-end:** JavaScript (em desenvolvimento)
+- **Linguagem Backend:** C# (.NET 8)
+- **Framework Backend:** ASP.NET Core - Minimal API  
+- **ORM:** Entity Framework Core  
+- **Banco de Dados:** SQLite  
+- **Front-end:** HTML • CSS • JavaScript  
 - **Versionamento:** Git + GitHub
-
----
 
 ## 🚀 Como Executar o Projeto
 
 ### ✅ Pré-requisitos
+- [.NET SDK 8.0+](https://dotnet.microsoft.com/download)
+- [SQLite](https://www.sqlite.org/download.html) ou DB Browser for SQLite
+- [Git](https://git-scm.com/) instalado
 
-- [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download)
-- [SQLite](https://www.sqlite.org/index.html) ou [DB Browser for SQLite](https://sqlitebrowser.org/)
-- Git instalado
-
-### ▶️ Passos
+### 📦 Passos
 
 ```bash
-# Clone o repositório
-git clone https://github.com/RaphaelPorto93/controle-financeiro-api.git
+# 1. Clone o repositório
+git clone https://github.com/RaphaelPorto93/controle-financeiro-api
 
-# Acesse a pasta
+# 2. Acesse a pasta do projeto
 cd controle-financeiro-api/ControleFinanceiroAPI
 
-# Restaure os pacotes
+# 3. Restaure os pacotes
 dotnet restore
 
-# Rode o projeto
+# 4. Execute a aplicação
 dotnet run

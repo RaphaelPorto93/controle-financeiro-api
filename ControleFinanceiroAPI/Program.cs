@@ -10,9 +10,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 var app = builder.Build();
 
-app.MapGet("/transacoes", async (AppDbContext db) =>
-    await db.Transacoes.ToListAsync());
-
 app.MapTransacoesEndpoints();
 
 app.MapCategoriaEndpoints();

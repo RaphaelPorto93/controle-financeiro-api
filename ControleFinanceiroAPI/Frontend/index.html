@@ -1,19 +1,33 @@
-<section id="categorias">
-  <h2>Categorias</h2>
-  <form id="form-categoria">
-    <input type="text" id="input-categoria" placeholder="Nova categoria" required />
-    <button type="submit">Adicionar</button>
-  </form>
-  <ul id="lista-categorias"></ul>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section id="categorias">
+            <h2>Categorias</h2>
+            <form id="form-categoria">
+                <input type="text" id="input-categoria" placeholder="Nova categoria" required />
+                <button type="submit">Adicionar</button>
+            </form>
+            <ul id="lista-categorias"></ul>
+        </section>
 
-<section id="transacoes">
-  <h2>Transações</h2>
-  <form id="form-transacao">
-    <input type="text" id="descricao" placeholder="Descrição" required />
-    <input type="number" id="valor" placeholder="Valor" required />
-    <input type="number" id="categoriaId" placeholder="ID da Categoria" required />
-    <button type="submit">Adicionar</button>
-  </form>
-  <ul id="lista-transacoes"></ul>
-</section>
+        <section id="transacoes">
+            <h2>Transações</h2>
+            <form id="form-transacao">
+                <input type="text" id="descricao" placeholder="Descrição" required />
+                <input type="number" id="valor" placeholder="Valor" required />
+                <input type="number" id="categoriaId" placeholder="ID da categoria" required />
+                <button type="submit">Adicionar</button>
+            </form>
+            <ul id="lista-transacoes"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

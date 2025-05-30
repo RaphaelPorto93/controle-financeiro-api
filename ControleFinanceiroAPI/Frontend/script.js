@@ -1,6 +1,5 @@
 const API_URL = "http://localhost:5155";
 
-
 async function carregarCategorias() {
   const resposta = await fetch(`${API_URL}/categorias`);
   const categorias = await resposta.json();
@@ -8,10 +7,18 @@ async function carregarCategorias() {
   const lista = document.getElementById("lista-categorias");
   lista.innerHTML = "";
 
+  const select = document.getElementById("categoriaId");
+  select.innerHTML = '<option value="">Selecione uma categoria</option>';
+
   categorias.forEach(cat => {
     const item = document.createElement("li");
     item.textContent = `#${cat.id} - ${cat.nome}`;
     lista.appendChild(item);
+
+    const option = document.createElement("option");
+    option.value = cat.id;
+    option.textContent = cat.nome;
+    select.appendChild(option);
   });
 }
 
@@ -32,7 +39,6 @@ document.getElementById("form-categoria").addEventListener("submit", async (e) =
 
 carregarCategorias();
 
-
 async function carregarTransacoes() {
   const resposta = await fetch(`${API_URL}/transacoes`);
   const transacoes = await resposta.json();
@@ -42,7 +48,10 @@ async function carregarTransacoes() {
 
   transacoes.forEach(tx => {
     const item = document.createElement("li");
-    item.textContent = `#${tx.id} - ${tx.descricao} | R$ ${tx.valor.toFixed(2)} | Categoria ${tx.categoriaId}`;
+    item.innerHTML = `
+      <strong>#${tx.id}</strong> - ${tx.descricao} | R$ ${tx.valor.toFixed(2)} | Categoria ${tx.categoriaId}
+      <button onclick="deletarTransacao(${tx.id})">🗑️</button>
+    `;
     lista.appendChild(item);
   });
 }
@@ -65,3 +74,12 @@ document.getElementById("form-transacao").addEventListener("submit", async (e) =
 });
 
 carregarTransacoes();
+
+async function deletarTransacao(id) {
+  if (confirm("Tem certeza que deseja deletar esta transação?")) {
+    await fetch(`${API_URL}/transacoes/${id}`, {
+      method: "DELETE"
+    });
+    carregarTransacoes();
+  }
+}

@@ -21,7 +21,9 @@
             <form id="form-transacao">
                 <input type="text" id="descricao" placeholder="Descrição" required />
                 <input type="number" id="valor" placeholder="Valor" required />
-                <input type="number" id="categoriaId" placeholder="ID da categoria" required />
+                <select id="categoriaId" required>
+                    <option value="">Selecione uma categoria</option>
+                </select>
                 <button type="submit">Adicionar</button>
             </form>
             <ul id="lista-transacoes"></ul>

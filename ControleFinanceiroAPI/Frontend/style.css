@@ -1,36 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-  max-width: 700px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  max-width: 800px;
   margin: auto;
   padding: 20px;
+  color: #333;
 }
 
 h1, h2 {
-  color: #333;
+  color: #2d89ef;
+  border-bottom: 2px solid #2d89ef;
+  padding-bottom: 5px;
 }
 
 form {
   margin-bottom: 20px;
 }
 
-input {
-  padding: 8px;
-  margin-right: 5px;
+input, select {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 400px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 button {
-  padding: 8px 12px;
+  padding: 10px 16px;
   background-color: #2d89ef;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: #1b64c0;
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[onclick^="deletarTransacao"] {
+  float: right;
+  background-color: #ff4d4d;
+}
+
+button[onclick^="deletarTransacao"]:hover {
+  background-color: #d93636;
 }

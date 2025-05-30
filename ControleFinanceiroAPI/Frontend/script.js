@@ -70,16 +70,12 @@ document.getElementById("form-transacao").addEventListener("submit", async (e) =
   });
 
   document.getElementById("form-transacao").reset();
+  document.getElementById("feedback").textContent = "✅ Transação adicionada com sucesso!";
+
   carregarTransacoes();
+
+  setTimeout(() => {
+    document.getElementById("feedback").textContent = "";
+  }, 3000);
 });
 
-carregarTransacoes();
-
-async function deletarTransacao(id) {
-  if (confirm("Tem certeza que deseja deletar esta transação?")) {
-    await fetch(`${API_URL}/transacoes/${id}`, {
-      method: "DELETE"
-    });
-    carregarTransacoes();
-  }
-}
